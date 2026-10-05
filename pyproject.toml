@@ -25,7 +25,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 dependencies = [
-  "meridian-storage-core>=1.0.1,<2",
+  "meridian-storage-core>=1,<2",
   "meridian-storage-semantics>=2.0.0,<3",
 ]
 
