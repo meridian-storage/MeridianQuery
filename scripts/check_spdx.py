@@ -7,7 +7,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SUFFIXES = {".py", ".sh", ".md", ".toml", ".yml", ".yaml"}
-IGNORED_PARTS = {".git", ".mypy_cache", ".pytest_cache", ".ruff_cache", ".venv", "dist"}
+# deps/ and the language lock are jumbo-generated overlays (materialized
+# recorded dependency artifacts / the generated lock), not repository
+# sources — the SPDX policy covers the repository's own files.
+IGNORED_PARTS = {".git", ".mypy_cache", ".pytest_cache", ".ruff_cache", ".venv", "dist", "deps", "uv.lock", "package-lock.json"}
 
 
 def main() -> None:
